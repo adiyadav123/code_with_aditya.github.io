@@ -1,134 +1,48 @@
 <!DOCTYPE html>
-<!-- Created By CodingNepal - www.codingnepalweb.com -->
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>Responsive Navbar | Code With Aditya</title>
+    <title>Code With Aditya</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="website.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
   </head>
   <body>
-    <nav>
-      <input type="checkbox" id="check">
-      <label for="check" class="checkbtn">
-        <i class="fas fa-bars"></i>
-      </label>
-      <label class="logo">Code With Aditya</label>
-      <ul>
-        <li><a class="active" href="#">Home</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Contact</a></li>
-      </ul>
-    </nav>
-    <br><br><br><br><br><br><br><br><br>
-    <center>
-        <h1>
-            Hey ! All Of You <span>Welcome</span> To My First Website
-         </h1>
-    </center>
-  </body>
-  <style>
-   @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
-    *{
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-        font-family: 'Poppins',sans-serif;
-        text-decoration: none;
-        list-style: none;
-    }
-    h1 span
-    {
-        color: white;
-        background: #1b9bff;
-        padding: 5px;
-        border-radius: 10px;
-    }
-    nav{
-        background-color: black;
-        height: 80px;
-        width: 100%;
-    }
-    label.logo{
-        color: white;
-        font-size: 30px;
-        line-height: 80px;
-        padding: 0 20px;
-        font-weight: bold;
-    }
-    nav ul{
-        float: right;
-        margin-right: 20px;
-    }
-    nav ul li {
-        display: inline-block;
-        line-height: 80px;
-        margin: 0 5px;
-    }
-    nav ul li a{
-  color: white;
-  font-size: 17px;
-  padding: 7px 13px;
-  border-radius: 3px;
-  text-transform: uppercase;
-}
-a.active,a:hover{
-  background: #1b9bff;
-  transition: .5s;
-}
-.checkbtn{
-  font-size: 30px;
-  color: white;
-  float: right;
-  line-height: 80px;
-  margin-right: 40px;
-  cursor: pointer;
-  display: none;
-}
-#check{
-  display: none;
-}
-@media (max-width: 952px){
-  label.logo{
-    font-size: 30px;
-    padding-left: 50px;
-  }
-  nav ul li a{
-    font-size: 16px;
-  }
-}
-@media (max-width: 858px){
-  .checkbtn{
-    display: block;
-  }
-  ul{
-    position: fixed;
-    width: 100%;
-    height: 100vh;
-    background: #2c3e50;
-    top: 80px;
-    left: -100%;
-    text-align: center;
-    transition: all .5s;
-  }
-  nav ul li{
-    display: block;
-    margin: 50px 0;
-    line-height: 30px;
-  }
-  nav ul li a{
-    font-size: 20px;
-  }
-  a:hover,a.active{
-    background: none;
-    color: #0082e6;
-  }
-  #check:checked ~ ul{
-    left: 0;
-  }
-}
-</style>
+    <div class="container">
+ <div class="black">
+     <nav> 
+         <i onclick="openmenu()" class="fa fa-bars open" aria-hidden="true"></i> 
+         <h1>Code With Aditya</h1>
+         <ul id="menu">
+            <i onclick="closemenu()" class="fa fa-times close" aria-hidden="true"></i>
+          <li><a href="#home">Home</a></li> 
+             <li><a href="#about">About</a></li> 
+             <li><a href="#services">Services</a></li> 
+             <li><a href="#contact">Contact</a></li> 
+         </ul>
+     </nav>
+     <div class="center">
+         <h1>Hello i'm<span> Aditya</span></h1>
+         <p>Welcome To M Website</p>
+        <a href="#about"> <button>More Info</button></a>
+     </div>
+ </div>
+    </div>
+    <div class="content"> 
+       <a name="about"></a> 
+        <h1>About me</h1> 
+    <p align="center">Hey!<br>My Name is Aditya Yadav <br>I'm a Frontend And Backend Developer<br>i used to love coding when i was a kid and later on i learned html , css and javascript <br>my future plannings are to become a famous youtuber <br> thank you have a nice day ahead<p align="right"><br>~aditya</p></p><h1><a name="services"></a>services</h1><p align="center"><img src="https://images.businessnewsdaily.com/app/uploads/2022/04/04081906/build-your-pages.png" alt="" width="60%"></p><h2 align="center">your <span id="weee">website</span> in your hands</h2><p align="center">we'll make the best website in the cheapest cost for you<br><br>you just need to contact us and get your website done according to your idea</p> 
+    </div> 
+    <footer><a name="contact"></a><h2 align="center">© Code With Aditya</h2><i><p align="center">contact us: +91 7275708969<br>e-mail: ay971876@gmail.com<br>instagram: aditya55819d</p></i></footer>
+  </body> 
+  <script>
+    var navlinks=document.getElementById("menu");
+ function openmenu(){
+    navlinks.style.right="0px"
+     }
+     function closemenu(){
+      navlinks.style.right="-200px"
+      }
+  </script>
 </html>
-  </style>
-</html>
+
