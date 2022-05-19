@@ -1,120 +1,131 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
+
+<head>
+    <meta charset="UTF-8">
     <title>Code With Aditya</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
-  </head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+</head>
   <style>
-  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;900&display=swap');
-html{
-          scroll-behavior: smooth;      
-            }
-*{
+   @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;900&display=swap');
+html {
+    scroll-behavior: smooth;
+}
+
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
     text-transform: capitalize;
 }
-.container{
-width: 100%;
-height: 100vh;
-background-image: url(https://steamuserimages-a.akamaihd.net/ugc/398925305501297776/64B863758E4A28B3E9C5CBCA1032A539EAC96681/?imw=5000&imh=5000&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=false);
-background-size: cover;
-background-position: bottom;
-overflow: hidden;
-}
-.black{
-    width: 100%;
-    height: 100vh;
-    background-image: linear-gradient(to top left,rgba(0,0,0,0.7),rgba(0,0,0,0.8));
-    position: absolute;
-background-size: cover;
-background-position: bottom;
-overflow: hidden;
-}
-.black{
-    width: 100%;
-    height: 100vh;
-    background-image: linear-gradient(to top left,rgba(0,0,0,0.7),rgba(0,0,0,0.8));
-    position: absolute;
 
+.container {
+    width: 100%;
+    height: 100vh;
+    background-image: url(https://steamuserimages-a.akamaihd.net/ugc/398925305501297776/64B863758E4A28B3E9C5CBCA1032A539EAC96681/?imw=5000&imh=5000&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=false);
+    background-size: cover;
+    background-position: bottom;
     overflow: hidden;
 }
-.center{
+
+.black {
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(to top left, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.8));
+    position: absolute;
+    background-size: cover;
+    background-position: bottom;
+    overflow: hidden;
+}
+
+.center {
     position: absolute;
     width: 100%;
-   top: 50%;
-  left: 50%;
-    transform: 
-    translate(-50%,-50%);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     padding: 0 30px;
     text-align: center;
     color: white;
 }
-.center h1{
-  font-size: 35px;
-  color: rgb(255, 255, 255);
+
+.center h1 {
+    font-size: 35px;
+    color: rgb(255, 255, 255);
 }
-.center h1 span{
+
+.center h1 span {
     color: rgb(19, 141, 240);
 }
-.center p{
- font-size: 18px;
+
+.center p {
+    font-size: 18px;
 }
-.center button{
- padding: 3px 20px;
- margin-top: 20px;
- background: transparent;
- border: 2px solid white;
- color: white;
- font-weight:600;
- transition:300ms;
- border-radius:2px;
+
+.center button {
+    padding: 3px 20px;
+    margin-top: 20px;
+    background: transparent;
+    border: 2px solid white;
+    color: white;
+    font-weight: 600;
+    transition: 300ms;
+    border-radius: 2px;
+    cursor: pointer;
 }
-button:hover{
-    color:black;
+
+button:hover {
+    color: black;
     background-color: white;
 }
-nav{
+
+nav {
     position: absolute;
     display: flex;
     width: 100%;
     align-items: center;
     z-index: 100;
+    margin-right: 20px;
 }
-nav h1{
+
+nav h1 {
     font-size: 30px;
     margin-left: 20px;
     color: white;
 }
-ul{
+
+ul {
     position: absolute;
     right: 20px;
 }
-li{
+
+li {
     display: inline;
     list-style-type: none;
     margin-left: 20px;
 }
-a{
+
+a {
     color: white;
     text-decoration: none;
 }
-a:hover{
+
+a:hover {
     color: rgb(19, 141, 240);
 }
-nav .open{
+
+nav .open {
     font-size: 30px;
     color: white;
     position: absolute;
     right: 20px;
     display: none;
 }
-nav .close{
+
+nav .close {
     font-size: 30px;
     color: rgb(0, 0, 0);
     position: absolute;
@@ -122,85 +133,285 @@ nav .close{
     margin-top: -35px;
     display: none;
 }
-.content{
+
+.content {
     padding: 30px;
     text-align: justify;
 }
-.content h1{
+
+.content h1 {
     text-align: center;
 }
+
 @media only screen and (max-width:650px) {
-    ul{
+    ul {
         background-color: white;
         top: 0px;
-       padding:40px ;
+        padding: 40px;
         right: -200px;
-       height: 100vh;
-       transition: 1s;
+        height: 100vh;
+        transition: 1s;
     }
-    li{
+    li {
         display: block;
         margin-bottom: 10px;
     }
-    a{
+    a {
         color: black;
+        cursor: pointer;
     }
-   nav .open{
-display: block;
-    }
-   nav .close{
+    nav .open {
         display: block;
-   }
+    }
+    nav .close {
+        display: block;
+    }
 }
-footer{
-    color:white;
+
+footer {
+    color: white;
     background-color: black;
-    width:100%;
-}                 
-#weee{
-    Background-color:black;
-    color:white;
-    border-radius:4px;
-    width:100px;  
-    padding:2px                                                  
+    width: 100%;
+}
+
+#weee {
+    Background-color: black;
+    color: white;
+    border-radius: 4px;
+    width: 100px;
+    padding: 2px
+}
+
+.contact1 {
+    text-transform: lowercase;
+}
+
+.code1-source {
+    color: rgb(19, 141, 240);
+}
+
+.code1-source:hover {
+    text-decoration: underline;
+}
+
+i {
+    cursor: pointer;
+}
+
+.codes {
+    text-align: left;
+    font-size: 20px;
+    margin-left: 15px;
+}
+
+.code1-html {
+    text-align: center;
+}
+
+.source-code {
+    text-transform: lowercase;
+    text-align: center;
+    font-weight: 300;
+    background-color: black;
+    color: white;
+    padding: 15px;
+    margin-left: 20px;
+    margin-right: 40px;
 }
   </style>
-  <body>
+<body>
     <div class="container">
- <div class="black">
-     <nav> 
-         <i onclick="openmenu()" class="fa fa-bars open" aria-hidden="true"></i> 
-         <h1>Code With Aditya</h1>
-         <ul id="menu">
-            <i onclick="closemenu()" class="fa fa-times close" aria-hidden="true"></i>
-          <li><a href="#home">Home</a></li> 
-             <li><a href="#about">About</a></li> 
-             <li><a href="#services">Services</a></li> 
-             <li><a href="#contact">Contact</a></li> 
-         </ul>
-     </nav>
-     <div class="center">
-         <h1>Hello i'm<span> Aditya</span></h1>
-         <p>Welcome To My Website</p>
-        <a href="#about"> <button>More Info</button></a>
-     </div>
- </div>
+        <div class="black">
+            <nav>
+                <i onclick="openmenu()" class="fa fa-bars open" aria-hidden="true" style="cursor: pointer;"></i>
+                <h1>Code With Aditya</h1>
+                <ul id="menu">
+                    <i onclick="closemenu()" class="fa fa-times close" aria-hidden="true" style="cursor:pointer"></i>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#codes">Source Codes</a></li>
+                    <li><a href="#python-codes">Python </a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="center">
+                <h1>Hello i'm<span> Aditya</span></h1>
+                <p>Welcome To M Website</p>
+                <a href="#about"> <button>More Info</button></a>
+            </div>
+        </div>
     </div>
-    <div class="content"> 
-       <a name="about"></a> 
-        <h1>About me</h1> 
-    <p align="center">Hey!<br>My Name is Aditya Yadav <br>I'm a Frontend And Backend Developer<br>i used to love coding when i was a kid and later on i learned html , css and javascript <br>my future plannings are to become a famous youtuber and a full stack developer<br> thank you have a nice day ahead<p align="right"><br>~aditya</p></p><h1><a name="services"></a>services</h1><p align="center"><img src="https://images.businessnewsdaily.com/app/uploads/2022/04/04081906/build-your-pages.png" alt="" width="60%"></p><h2 align="center">your <span id="weee">website</span> in your hands</h2><p align="center">we'll make the best website in the cheapest cost for you<br><br>you just need to contact us and get your website done according to your idea</p> 
-    </div> 
-    <footer><a name="contact"></a><h2 align="center">© Code With Aditya</h2><i><p align="center">contact us: +91 7275708969<br>e-mail: ay971876@gmail.com<br>instagram: aditya55819d</p></i></footer>
-  </body> 
-  <script>
-    var navlinks=document.getElementById("menu");
- function openmenu(){
-    navlinks.style.right="0px"
-     }
-     function closemenu(){
-      navlinks.style.right="-200px"
-      }
-  </script>
-</html>
+    <div class="content">
+        <a name="about"></a>
+        <h1>About me</h1>
+        <p align="center">Hey!<br>My Name is Aditya Yadav <br>I'm a Frontend And Backend Developer<br>i used to love coding when i was a kid and later on i learned html , css and javascript <br>my future plannings are to become a famous youtuber <br> thank you have a nice
+            day ahead
+            <p align="right"><br>~aditya</p> <br>
+            <hr><br>
+        </p>
+        <h1>
+            <a name="services"></a>services</h1>
+        <p align="center">
+            <img src="https://images.businessnewsdaily.com/app/uploads/2022/04/04081906/build-your-pages.png" alt="" width="60%"></p>
+        <h2 align="center">your <span id="weee">website</span> in your hands</h2>
+        <p align="center">we'll make the best website in the cheapest cost for you<br><br>you just need to contact us and get your website done according to your idea</p>
+        <br>
+        <hr> </div><br>
+    <div class="source-codes">
+        <a name="codes"></a>
+        <center>
+            <h1>Source Codes</h1>
+            <br>
+            <h1 class="codes" style="font-size:20px; text-align:left;
+             margin-left: 15px;">1 . javascript clock
+                <br>
+                <p class="code1-html">
+                    <a class="code1-source" href="https://codepen.io/codewithaditya-123/pen/eYVWGPb">Source Code</a>
+                    <br><a class="code1-source" href="https://codepen.io/codewithaditya-123/pen/eYVWGPb">demo </a>
+                </p>
+            </h1><br>
+            <h1 class="codes">
+                2. Parallax Scroller
+                <br>
+                <p class="code1-html">
+                    <a class="code1-source" href="https://codepen.io/codewithaditya-123/pen/abqWLPe">Source Code</a>
+                    <br><a class="code1-source" href="https://codepen.io/codewithaditya-123/pen/abqWLPe">demo </a>
+                </p>
+            </h1><br>
+            <h1 class="codes">
+                3. Dot Loading Animation
+                <br>
+                <p class="code1-html">
+                    <a class="code1-source" href="https://codepen.io/codewithaditya-123/pen/rNJmGbb">Source Code</a>
+                    <br><a class="code1-source" href="https://codepen.io/codewithaditya-123/pen/rNJmGbb">demo </a>
+                </p>
+            </h1><br>
+            <h1 class="codes">
+                4. GMAIL Login clone
+                <br>
+                <p class="code1-html">
+                    <a class="code1-source" href="https://codepen.io/codewithaditya-123/pen/eYVWGwo">Source Code</a>
+                    <br><a class="code1-source" href="https://codepen.io/codewithaditya-123/pen/eYVWGwo">demo </a>
+                </p>
+            </h1><br>
+            <h1 class="codes">
+                5. Sunflower CSS Art
+                <br>
+                <p class="code1-html">
+                    <a class="code1-source" href="https://codepen.io/codewithaditya-123/pen/LYQWqaN">Source Code</a>
+                    <br><a class="code1-source" href="https://codepen.io/codewithaditya-123/pen/LYQWqaN">demo </a>
+                </p>
+            </h1>
+            <h1 class="codes">
+                6. Navigation bar
+                <br>
+                <p class="code1-html">
+                    <a class="code1-source" href="https://codepen.io/codewithaditya-123/pen/BaYpWVp">Source Code</a>
+                    <br><a class="code1-source" href="https://codepen.io/codewithaditya-123/pen/BaYpWVp">demo </a>
+                </p>
+            </h1><br>
+            <h1 class="codes">
+                7. beautiful drop UI
+                <br>
+                <p class="code1-html">
+                    <a class="code1-source" href="https://codepen.io/codewithaditya-123/pen/YzeVEyN">Source Code</a>
+                    <br><a class="code1-source" href="https://codepen.io/codewithaditya-123/pen/YzeVEyN">demo </a>
+                </p>
+            </h1><br>
+            <h1 class="codes">
+                8. Simple animated pop-up button
+                <br>
+                <p class="code1-html">
+                    <a class="code1-source" href="https://codepen.io/codewithaditya-123/pen/wvydPMj">Source Code</a>
+                    <br><a class="code1-source" href="https://codepen.io/codewithaditya-123/pen/wvydPMj">demo </a>
+                </p>
+            </h1><br>
+            <h1 class="codes">
+                9. Neumorhic Button
+                <br>
+                <p class="code1-html">
+                    <a class="code1-source" href="https://codepen.io/codewithaditya-123/pen/NWybQOa">Source Code</a>
+                    <br><a class="code1-source" href="https://codepen.io/codewithaditya-123/pen/NWybQOa">demo </a>
+                </p>
+            </h1> <br>
+            <h1 class="codes">
+                10. Animated Scrollbar
+                <br>
+                <p class="code1-html">
+                    <a class="code1-source" href="https://codepen.io/codewithaditya-123/pen/MWQmOjd">Source Code</a>
+                    <br><a class="code1-source" href="https://codepen.io/codewithaditya-123/pen/MWQmOjd">demo</a>
+                </p>
+            </h1>
+            <hr><br>
+            <div class="python">
+                <a name="python-codes"></a>
+                <h1 class="codes">
+                    1. A program for calculating area of triangle(Python)
+                    <p class="code1-html">Source Code</p><br>
+                    <p class="source-code">
+                        base = float(input()) <br> height = float(input()) <br> area = 1/2 * base * height <br> print("The area of triangle is: ",area)
+                    </p>
+                </h1><br>
+                <h1 class="codes">
+                    2. a program for calculating area of rectangle (Py)
+                    <br>
+                    <p class="code1-html">
+                        source code
+                    </p><br>
+                    <p class="source-code">
+                        length = float(input()) <br> breadth = float(input()) <br> area = 2 * ( lenght + breadth) print("The area of rectangle is: ",area )
+                    </p>
+                </h1>
+                <br>
+                <h1 class="codes">
+                    3. Tax on salary calculator (py) <br> <br>
+                    <p class="source-code">
 
+                        salary = float(input("Your salary: ")) <br> if salary
+                        < 10000 : <br>
+                            rate = 0.00 <br> elif salary
+                            < 20000 : <br>
+                                rate = 0.05 <br> elif salary
+                                < 40000 : <br>
+                                    rate : 0.10 <br> elif salary
+                                    < 60000: <br>
+                                        rate = 0.15 <br> elif salary
+                                        < 80000: <br>
+                                            rate = 0.20 <br> elif salary
+                                            < 100000 : <br>
+                                                rate = 0.25 <br> elif salary
+                                                < 120000: <br>
+                                                    rate = 0.30 <br> elif salary
+                                                    < 140000: <br>
+                                                        rate = 0.35 <br> elif salary
+                                                        < 160000: <br>
+                                                            rate = 0.40 <br> elif salary
+                                                            < 180000: <br>
+                                                                rate = 0.45 <br> elif salary
+                                                                < 200000: <br>
+                                                                    rate = 0.50 <br> else: <br> rate = .55 <br> print("You must pay ",rate*salary , "as taxes ") <br>
+
+                    </p>
+                </h1>
+            </div>
+            <br></center><br>
+        <hr>
+    </div><br>
+    <footer>
+        <a name="contact"></a>
+        <h2 align="center ">© Code With Aditya</h2><i><p class="contact1 " align="center ">contact us: +91 7275708969<br>e-mail: ay971876@gmail.com<br>instagram: aditya55819d</p></i></footer>
+</body>
+<script>
+    var navlinks = document.getElementById("menu");
+
+    function openmenu() {
+        navlinks.style.right = "0px "
+    }
+
+    function closemenu() {
+        navlinks.style.right = "-200px "
+    }
+</script>
+
+</html>
